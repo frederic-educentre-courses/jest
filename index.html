@@ -19,8 +19,89 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Test avec Jest</h1>
+				</section>
+				<section>
+					<h2>Pourquoi mettre en place des tests ?</h2>
+					<ul>
+						<li>Assurer la qualité du code</li>
+						<li>Prévenir les régressions</li>
+						<li>Faciliter la maintenance</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Types de tests</h2>
+					<ul>
+						<li>Tests unitaires</li>
+						<li>Tests d'intégration</li>
+						<li>Tests fonctionnels</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Tests unitaires</h2>
+					<p>Les tests unitaires vérifient le bon fonctionnement d'une unité de code (fonction, classe, etc.) de manière isolée.</p>
+				</section>
+				<section>
+					<h2>Tests d'intégration</h2>
+					<p>Les tests d'intégration vérifient le bon fonctionnement de plusieurs unités de code qui interagissent entre elles. (ex: une fonction qui interagit avec une base de données ou un système externe)</p>
+				</section>
+				<section>
+					<h2>Tests fonctionnels</h2>
+					<p>Les tests fonctionnels vérifient le bon fonctionnement d'une fonctionnalité du point de vue de l'utilisateur.</p>
+					<p>Dans ce cas, on créer des scénarios de test qui simulent l'usage réel de l'application.</p>
+				</section>
+				<section>
+					<h2>Jest</h2>
+					<p>Jest est un framework de test pour JavaScript.</p>
+					<a href="https://jestjs.io/" target="_blank">Documentation</a>
+				</section>
+				<section>
+					<h2>Installation</h2>
+					<pre><code class="language-bash">npm install --save-dev jest</code></pre>
+				</section>
+				<section>
+					<h2>Exemple de test</h2>
+					<pre><code class="language-javascript">// sum.test.js
+
+// Fonction à tester
+function sum(a, b) {
+	return a + b;
+}
+// Comparaison du résultat avec la valeur attendue
+test('adds 1 + 2 to equal 3', () => {
+	expect(sum(1, 2)).toBe(3);
+});
+					</code></pre>
+				</section>
+				<section>
+					<h2>Comparateurs/matcheurs de la classe Expect de Jest</h2>
+					<ul>
+						<li><code>toBe()</code> : vérifie l'égalité stricte</li>
+						<li><code>toEqual()</code> : vérifie l'égalité de valeur</li>
+						<li><code>toBeTruthy()</code> : vérifie qu'une valeur est truthy</li>
+						<li><code>toBeFalsy()</code> : vérifie qu'une valeur est falsy</li>
+					</ul>
+					<p>
+						<a href="https://jestjs.io/fr/docs/using-matchers">Documentation des comparateurs</a>
+					</p>
+				</section>
+				<section>
+					<h2>Configuration de Jest dans le package.json</h2>
+					<pre><code class="language-json">{
+  "scripts": {
+    "test": "jest"
+  }
+}</code></pre>
+				</section>
+				<section>
+					<h2>Exécution des tests</h2>
+					<pre><code class="language-bash">npm test</code></pre>
+				</section>
+				<section>
+					<h2>Dans un monde idéal ...</h2>
+					<p>Chaque ligne de code est testée, et chaque test est exécuté à chaque modification du code.</p>
+				</section>
 			</div>
 		</div>
 
